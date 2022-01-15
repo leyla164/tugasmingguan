@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="jumlah">
+
+    <select name="pilih" id="pilih">
+        <option value="CASE" id="CASE">SWITCH CASE</option>
+        <option value="kelipatan2" id="kelipatan2">KELIPATAN 2</option>
+        <option value="kelipatan5" id="kelipatan5">KELIPATAN 5</option>
+        <option value="ganjil genap" id="ganjilgenap"> GANJIL DAN GENAP</option>
+        <option value="kuadrat" id="kuadrat"> KUADRAT</option>
+    </select>
+
+    <button onclick=submit()>clik</button>
+    <script>
+        function submit(){
+        var CASE  = document.getElementById("CASE").value;
+        var kelipatan2= document.getElementById("kelipatan2").value;
+        var kelipatan5= document.getElementById("kelipatan5").value;
+        var ganjilgenap= document.getElementById("ganjilgenap").value;
+        var kuadrat= document.getElementById("kuadrat").value;
+        var jumlah = document.getElementById("jumlah").value;
+        var pilih = document.getElementById("pilih").value;
+    
+         
+                if(pilih == "kelipatan2"){
+
+                    for(var i = 1; i <= jumlah; i++){
+                    if(i % 2 == 0)
+                    document.write(i +"<br>");
+                 }
+               }
+        
+              if(pilih == "kelipatan5"){
+        
+                   for(var i=jumlah; i >=5; i--){
+                   if(i % 5 == 0)
+                  document.write( i +"<br>");
+            }
+               }
+              
+               if(pilih == "ganjilgenap"){
+
+                for(var i = jumlah; i <= 20; i++){
+                  if(i % 2 == 0){
+                    document.write( i +"Adalah bilangan genap <br>");
+                  }
+                  else{
+                    document.write( i +"Adalah bilangan ganjil <br>");
+                  }
+                }
+              }
+             
+              if(pillih == "kuadrat"){
+
+                for (var i=1; i <= bilangan; i++){
+                   if (i % 2 == 1){
+                   hasil = i * i;
+                   document.write( " hasil " + hasil +"<br>");
+               } 
+            } 
+                   if (i % 2 == 0){
+                   hasil = i*i;
+                  document.write( " hasil" + hasil + "<br>");
+              }
+          }
+             if( pillih == "CASE"){
+
+              switch (pilih){
+            case "hitam":
+                teks ="warna hitam";
+                break;
+            case "merah":
+                teks ="warna merah";
+                break;
+            case "biru":
+                teks ="warna biru";
+                break;
+            default:
+                teks ="warna tidak terdeteksi"
+            }
+             document.getElementById("hasil").innerHTML = teks;
+         }
+      }
+    </script>
+</body>
+</html>

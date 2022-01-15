@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <body>
+    <label>warna</label>
+     <input type="text" id="pilih">
+     <button onclick="submit()">proses</button>
+     <p id="hasil"></p>
+  <script>
+      function submit(){
+        var pilih = document.getElementById("pilih").value;
+
+    switch (pilih){
+        case "hitam":
+        teks ="warna hitam";
+        break;
+        case "merah":
+        teks ="warna merah";
+        break;
+        case "biru":
+        teks ="warna biru";
+        break;
+        default:
+        teks ="warna tidak terdeteksi"
+      }
+        document.getElementById("hasil").innerHTML = teks;
+    }
+    </script>
+</body>
+</html>
